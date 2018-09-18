@@ -1,5 +1,6 @@
-names = ['Jeff', 'Gary', 'Jill', 'Samantha']
+from flask import Flask
+app=Flask(__name__)
 
-for name in names:
-    statement = 'Hello there ' + name
-    print(statement)
+@app.route('/')
+def index():
+     return 'hello,world'
